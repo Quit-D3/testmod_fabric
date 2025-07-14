@@ -67,21 +67,18 @@ public class Testmod implements ModInitializer {
 //            list.add(Text.translatable("item.testmod.spear.tooltip Hello Fabric World!"));
 //        });
 
-        //将BANANA物品添加到物品组Items.NATURAL的末尾//add()方法默认向后排序
+        //将BANANA物品添加到物品组Items.NATURAL
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(
-                entries -> {
-            entries.add(BANANA);
-        });
-        //将BANANA物品添加到物品组Items.FOOD_AND_DRINK中的Items.APPLE之后//addAfter(A, B)方法，A已在物品组中，将B添加到A之后
+                //添加位置为Items.NATURAL的末尾
+                entries -> entries.add(BANANA));
+        //将BANANA物品添加到物品组Items.FOOD_AND_DRINK
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(
-                entries -> {
-            entries.addAfter(Items.APPLE, BANANA);
-        });
-        //将SPEAR物品添加到物品组Items.COMBAT中的Items.NETHERITE_SWORD之前//addBefore(A，B)方法，A已在物品组中，将B添加到A之前
+                //添加位置为Items.FOOD_AND_DRINK中的Items.APPLE之后
+                entries -> entries.addAfter(Items.APPLE, BANANA));
+        //将SPEAR物品添加到物品组Items.COMBAT
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(
-                entries -> {
-            entries.addBefore(Items.NETHERITE_SWORD, SPEAR);
-        });
+                //添加位置为Items.COMBAT中的Items.NETHERTITE_SWORD之前
+                entries -> entries.addBefore(Items.NETHERITE_SWORD, SPEAR));
 
         //初始化物品组TESTMOD_GROUP_KEY，注册到Registries.ITEM_GROUP中，需要以RegistryKey方式注册物品组
 //        Registry.register(

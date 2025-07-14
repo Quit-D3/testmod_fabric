@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": "testmod:banana",
+  "result": {
+    "id":"minecraft:leather"
+  },
+  "experience": 100
+}

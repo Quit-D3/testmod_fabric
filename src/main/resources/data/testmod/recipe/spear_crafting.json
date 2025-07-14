@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": "minecraft:stick",
+    "B": "minecraft:iron_ingot"
+  },
+  "pattern": [
+    "B  ",
+    " B ",
+    "  A"
+  ],
+  "result": {
+    "count": 1,
+    "id": "testmod:spear"
+  }
+}
