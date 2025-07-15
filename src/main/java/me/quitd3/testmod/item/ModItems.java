@@ -15,11 +15,11 @@ import static me.quitd3.testmod.item.ModItemGroups.*;
 
 public class ModItems {
     //初始化注册物品
-    private static Item register(String path, Function<Item.Settings, Item> factory, Item.Settings settings) {
+    public static Item registerItem(String path, Function<Item.Settings, Item> factory, Item.Settings settings) {
         final RegistryKey<Item> registryKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MOD_ID, path));
         return Items.register(registryKey, factory, settings);}
     //注册banana物品
-    public static final Item BANANA = register("banana", Item::new, new Item.Settings()
+    public static final Item BANANA = registerItem("banana", Item::new, new Item.Settings()
             //性质为食物，最大堆叠30个，营养值4，饱腹度0.4
             .maxCount(32)
             .food(new FoodComponent.Builder()
@@ -27,7 +27,7 @@ public class ModItems {
                     .saturationModifier(0.4f)
                     .build()));
     //注册spear物品
-    public static final Item SPEAR = register("spear", Spear::new, new Item.Settings()
+    public static final Item SPEAR = registerItem("spear", Spear::new, new Item.Settings()
             //性质不声明则默认为一般物品，最大堆叠1个
             .maxCount(1));
 

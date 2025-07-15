@@ -12,11 +12,11 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import java.util.function.Function;
 import static me.quitd3.testmod.Testmod.MOD_ID;
-import static me.quitd3.testmod.item.ModItemGroups.*;
+import static me.quitd3.testmod.item.ModItemGroups.TESTMOD_GROUP;
 
 public class ModBlocks {
     //初始化注册方块
-    private static Block register(String path, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
+    public static Block registerBlock(String path, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
         final Identifier identifier = Identifier.of(MOD_ID, path);
         final RegistryKey<Block> registryKey = RegistryKey.of(RegistryKeys.BLOCK, identifier);
         final Block block = Blocks.register(registryKey, factory, settings);
@@ -24,7 +24,7 @@ public class ModBlocks {
         return block;
     }
     //注册TEST_BLOCK
-    public static final Block JUICE = register("juice", Block::new, Block.Settings.create()
+    public static final Block JUICE = registerBlock("juice", Block::new, Block.Settings.create()
             .strength(4.0f)
             .requiresTool()
             .sounds(BlockSoundGroup.STONE));
