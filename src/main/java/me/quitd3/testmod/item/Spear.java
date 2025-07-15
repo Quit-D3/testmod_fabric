@@ -1,4 +1,4 @@
-package me.quitd3.testmod.items;
+package me.quitd3.testmod.item;
 
 import net.minecraft.component.type.TooltipDisplayComponent;
 import net.minecraft.entity.player.PlayerEntity;

@@ -1,4 +1,6 @@
 {
     "item.testmod.banana": "Banana",
-    "item.testmod.spear": "Spear"
+    "item.testmod.spear": "Spear",
+    "block.testmod.juice": "Juice",
+    "itemGroup.testmod.testmod_group": "TestMod"
 }

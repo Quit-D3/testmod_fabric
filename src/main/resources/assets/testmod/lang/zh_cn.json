@@ -1,4 +1,6 @@
 {
     "item.testmod.banana": "并非香蕉",
-    "item.testmod.spear": "并非长矛"
+    "item.testmod.spear": "并非长矛",
+    "block.testmod.juice": "并非果汁",
+    "itemGroup.testmod.testmod_group": "测试Mod物品组"
 }
